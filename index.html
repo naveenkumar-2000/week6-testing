@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bean Haven – Good Coffee, Better Days</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav-wrap">
+    <a href="#home" class="logo"><span class="logo-icon">☕</span>
+      <span><b>THE BEAN HAVEN</b><small>COFFEE · FOOD · GOOD VIBES</small></span></a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a><a href="#club">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button id="cartBtn" class="btn btn-light cart-btn" aria-label="Open cart">🛒 Cart <span id="cartCount" class="badge">0</span></button>
+      <button id="burger" class="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">PREMIUM COFFEE &amp; FRESH FOOD</p>
+      <h1>Good Coffee<br>Better Days</h1>
+      <p class="lead">At The Bean Haven, we bring people together over perfectly brewed coffee, fresh bites and a cozy atmosphere. More than just a café — it’s a feeling.</p>
+      <div class="actions">
+        <a href="#menu" class="btn btn-caramel">Explore Our Menu →</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <span class="script">Coffee<br>Food<br>Friends</span>
+      <div class="cup ph"><span>☕</span></div>
+      <span class="croissant">🥐</span>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container feature-grid">
+    <div><i>☕</i><h3>Premium Quality</h3><p>Finest beans, expertly brewed.</p></div>
+    <div><i>🍃</i><h3>Fresh Ingredients</h3><p>Tasty, healthy, always fresh.</p></div>
+    <div><i>👥</i><h3>Cozy Atmosphere</h3><p>A perfect place to relax.</p></div>
+    <div><i>🚚</i><h3>Fast &amp; Friendly Service</h3><p>Because you matter.</p></div>
+  </div>
+</section>
+
+<section id="menu" class="container section">
+  <div class="section-head">
+    <div><p class="eyebrow dark">OUR FEATURED MENU</p><h2>Popular Picks</h2></div>
+    <a href="#menu">View Full Menu →</a>
+  </div>
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-f="all">All</button>
+    <button class="tab" data-f="coffee">Coffee</button>
+    <button class="tab" data-f="cold">Cold Drinks</button>
+    <button class="tab" data-f="food">Food</button>
+  </div>
+  <div id="grid" class="menu-grid"></div>
+</section>
+
+<section id="about" class="container section-sm">
+  <div class="about-grid">
+    <div class="about-quote bean"><span>A Space for Good Moments ♡</span></div>
+    <div class="about-card card">
+      <p class="eyebrow dark">ABOUT US</p>
+      <h2>Our Story</h2>
+      <p>The Bean Haven was born from a simple idea — great coffee brings people together. What started as a small passion project has grown into a cozy café where every cup tells a story.</p>
+      <div class="values"><span>🫘<br>Quality Beans</span><span>👩‍🍳<br>Skilled Baristas</span><span>🤝<br>Warm Community</span></div>
+      <a href="#contact" class="btn btn-caramel">Learn More →</a>
+    </div>
+    <div class="about-img ph3">☕</div>
+  </div>
+</section>
+
+<section id="gallery" class="container section-sm">
+  <div class="section-head">
+    <div><h2>Gallery</h2><p class="hint">Share your Bean Haven moments — upload photos or videos.</p></div>
+    <label class="btn btn-caramel upload">⬆ Upload Photo / Video
+      <input id="upload" type="file" accept="image/*,video/*" multiple hidden>
+    </label>
+  </div>
+  <p id="uploadErr" class="upload-err" hidden></p>
+  <div class="gallery" id="gallery-grid">
+    <div class="ph"></div><div class="bean"></div><div class="ph4"></div><div class="ph2"></div>
+  </div>
+</section>
+
+<section id="club" class="club">
+  <div class="container club-wrap">
+    <div><h3>Join Our Coffee Club</h3><p>Get exclusive offers, new menu updates and special events.</p></div>
+    <form id="sub" class="subscribe">
+      <input type="email" required placeholder="Your email address">
+      <button>Subscribe →</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact" class="container section contact-grid">
+  <div>
+    <h2>Contact Us</h2>
+    <ul class="contact-list">
+      <li>📍 <b>Visit Us</b><span>123 Coffee Lane, Greenview, New York, NY 10001</span></li>
+      <li>📞 <b>Call Us</b><span>+1 (555) 123-4567</span></li>
+      <li>✉️ <b>Email Us</b><span>hello@thebeanhaven.com</span></li>
+      <li>🕒 <b>Opening Hours</b><span>Mon – Sun, 7:00 AM – 9:00 PM</span></li>
+    </ul>
+  </div>
+  <form id="msg" class="msg-form">
+    <h3>Send Us a Message</h3>
+    <div class="two"><input required placeholder="Name"><input required type="email" placeholder="Email"></div>
+    <textarea required rows="4" placeholder="Message"></textarea>
+    <button class="btn btn-dark">Send Message →</button>
+    <p id="ok" hidden>Thanks! We’ll be in touch soon.</p>
+  </form>
+</section>
+
+<footer class="footer">© 2026 The Bean Haven · Coffee · Food · Good Vibes</footer>
+
+
+<div id="cartModal" class="modal" hidden>
+  <div class="modal-box" role="dialog" aria-label="Your cart">
+    <button id="cartClose" class="modal-close" aria-label="Close">✕</button>
+    <div id="cartView">
+      <h3>Your Cart</h3>
+      <ul id="cartItems" class="cart-items"></ul>
+      <p id="cartEmpty" class="cart-empty">Your cart is empty. Add something tasty ☕</p>
+      <div id="cartFoot" class="cart-foot">
+        <div class="total"><span>Total</span><b id="cartTotal">$0.00</b></div>
+        <button id="placeOrder" class="btn btn-dark">Place Order</button>
+      </div>
+    </div>
+    <div id="orderDone" class="order-done" hidden>
+      <div class="tick">✓</div>
+      <h3>Your order has been placed!</h3>
+      <p>Wait for a few minutes, it will be ready as soon as possible.</p>
+      <button id="doneBtn" class="btn btn-caramel">Back to Menu</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
